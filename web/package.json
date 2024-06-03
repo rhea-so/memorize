@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "autoprefixer": "10.4.19",
+    "js-confetti": "^0.12.0",
     "konsta": "3.1.3",
     "postcss": "8.4.38",
     "react": "18.2.0",
