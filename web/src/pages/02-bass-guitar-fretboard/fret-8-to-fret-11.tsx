@@ -6,10 +6,10 @@ import { useState } from 'react';
 import { Fretboard } from '../../components/fretboard.canvas';
 
 const fretboard = [
-  ['G', 'A♭', 'A', 'B♭'],
-  ['D', 'E♭', 'E', 'F'],
-  ['A', 'B♭', 'B', 'C'],
-  ['E', 'F', 'F#', 'G'],
+  ['E♭', 'E', 'F', 'G♭'],
+  ['B♭', 'B', 'C', 'D♭'],
+  ['F', 'G♭', 'G', 'A♭'],
+  ['C', 'D♭', 'D', 'E♭'],
 ];
 
 const shuffle = () => {
@@ -27,7 +27,7 @@ const randomPositionY = () => {
   return Math.floor(Math.random() * fretboard.length);
 };
 
-export const OpenChordToFret3Page = () => {
+export const Fret8ToFret11Page = () => {
   const jsConfetti = new JSConfetti();
   const navigate = useNavigate();
 
@@ -61,12 +61,22 @@ export const OpenChordToFret3Page = () => {
 
   return (
     <Page>
-      <Navbar title="베이스 기타 지판 암기 (개방현 → 3프렛)" left={<NavbarBackLink text="돌아가기" onClick={() => navigate('/')} />} />
+      <Navbar title="베이스 기타 지판 암기 (8프렛 → 11프렛)" left={<NavbarBackLink text="돌아가기" onClick={() => navigate('/')} />} />
 
       <BlockTitle>다음 빨간색 원에 해당하는 음이름은 무엇인가요?</BlockTitle>
 
       <Card className="my-8">
-        <Fretboard hint={hint} nut={true} pointer={{ x: x, y: y }} dots={[{ x: 2, type: 1 }]} start={0} fretboard={fretboard} />
+        <Fretboard
+          hint={hint}
+          nut={false}
+          pointer={{ x: x, y: y }}
+          dots={[
+            { x: 0, type: 1 },
+            { x: 3, type: 2 },
+          ]}
+          start={8}
+          fretboard={fretboard}
+        />
       </Card>
 
       <BlockTitle>아래에서 정답을 선택해주세요</BlockTitle>

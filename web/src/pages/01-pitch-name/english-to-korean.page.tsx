@@ -38,6 +38,11 @@ export const EnglishToKoreanPage = () => {
       setOptions(shuffle());
       setQuestion(makeQuestion().pop()!);
       setWrongOptions([]);
+      let nextQuestion = makeQuestion().pop()!;
+      while (nextQuestion.question === question.question) {
+        nextQuestion = makeQuestion().pop()!;
+      }
+      setQuestion(nextQuestion);
     } else {
       setWrongOptions([...wrongOptions, answer]);
     }
@@ -46,6 +51,8 @@ export const EnglishToKoreanPage = () => {
   return (
     <Page>
       <Navbar title="음이름 외우기 (영어 → 한국어)" left={<NavbarBackLink text="돌아가기" onClick={() => navigate('/')} />} />
+
+      <BlockTitle>다음 음이름은 한국어로 무엇인가요?</BlockTitle>
 
       <p className="text-center text-8xl font-bold my-8">{question.question}</p>
 

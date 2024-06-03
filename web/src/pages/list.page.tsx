@@ -18,9 +18,9 @@ export const ListPage = () => {
         <BlockTitle>베이스 기타 지판 암기 (EADG Standard Tuning)</BlockTitle>
         <List strongIos outlineIos>
           <ListItem link title="개방현 ~ 3프렛" onClick={() => navigate('/bass-guitar-fretboard/open-chord-to-fret-3')} />
-          <ListItem link title="4프렛 ~ 8프렛" onClick={() => navigate('/bass-guitar-fretboard/fret-4-to-fret-8')} />
-          <ListItem link title="9프렛 ~ 12프렛" onClick={() => navigate('/bass-guitar-fretboard/fret-9-to-fret-12')} />
-          <ListItem link title="전체" onClick={() => navigate('/bass-guitar-fretboard/open-chord-to-fret-12')} />
+          <ListItem link title="4프렛 ~ 7프렛" onClick={() => navigate('/bass-guitar-fretboard/fret-4-to-fret-7')} />
+          <ListItem link title="8프렛 ~ 11프렛" onClick={() => navigate('/bass-guitar-fretboard/fret-8-to-fret-11')} />
+          <ListItem link title="전체" onClick={() => navigate('/bass-guitar-fretboard/open-chord-to-fret-11')} />
         </List>
       </Page>
     </>

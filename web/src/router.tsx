@@ -3,9 +3,9 @@ import { ListPage } from './pages/list.page';
 import { EnglishToKoreanPage } from './pages/01-pitch-name/english-to-korean.page';
 import { KoreanToEnglishPage } from './pages/01-pitch-name/korean-to-english.page';
 import { OpenChordToFret3Page } from './pages/02-bass-guitar-fretboard/open-chord-to-fret-3';
-import { Fret4ToFret8Page } from './pages/02-bass-guitar-fretboard/fret-4-to-fret-8';
-import { Fret9ToFret12Page } from './pages/02-bass-guitar-fretboard/fret-9-to-fret-12';
-import { OpenChordToFret12Page } from './pages/02-bass-guitar-fretboard/open-chord-to-fret-12';
+import { Fret4ToFret7Page } from './pages/02-bass-guitar-fretboard/fret-4-to-fret-7';
+import { Fret8ToFret11Page } from './pages/02-bass-guitar-fretboard/fret-8-to-fret-11';
+import { OpenChordToFret11Page } from './pages/02-bass-guitar-fretboard/open-chord-to-fret-11';
 
 export const Router = () => {
   return (
@@ -17,9 +17,9 @@ export const Router = () => {
         <Route path="/pitch-name/english-to-korean" element={<EnglishToKoreanPage />} />
 
         <Route path="/bass-guitar-fretboard/open-chord-to-fret-3" element={<OpenChordToFret3Page />} />
-        <Route path="/bass-guitar-fretboard/fret-4-to-fret-8" element={<Fret4ToFret8Page />} />
-        <Route path="/bass-guitar-fretboard/fret-9-to-fret-12" element={<Fret9ToFret12Page />} />
-        <Route path="/bass-guitar-fretboard/open-chord-to-fret-12" element={<OpenChordToFret12Page />} />
+        <Route path="/bass-guitar-fretboard/fret-4-to-fret-7" element={<Fret4ToFret7Page />} />
+        <Route path="/bass-guitar-fretboard/fret-8-to-fret-11" element={<Fret8ToFret11Page />} />
+        <Route path="/bass-guitar-fretboard/open-chord-to-fret-11" element={<OpenChordToFret11Page />} />
       </Routes>
     </BrowserRouter>
   );
