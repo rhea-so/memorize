@@ -15,7 +15,7 @@ export const ListPage = () => {
           <ListItem link title="CDEFGAB → 도레미파솔라시" onClick={() => navigate('/pitch-name/english-to-korean')} />
         </List>
 
-        <BlockTitle>베이스 기타 지판 암기 (EADG Standard Tuning)</BlockTitle>
+        <BlockTitle>4현 베이스 기타 지판 암기 (EADG Standard Tuning)</BlockTitle>
         <List strongIos outlineIos>
           <ListItem link title="개방현 ~ 3프렛" onClick={() => navigate('/bass-guitar-fretboard/open-chord-to-fret-3')} />
           <ListItem link title="4프렛 ~ 7프렛" onClick={() => navigate('/bass-guitar-fretboard/fret-4-to-fret-7')} />
