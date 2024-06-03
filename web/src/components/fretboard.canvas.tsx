@@ -139,5 +139,5 @@ export const Fretboard = ({
     ctx.strokeStyle = 'black';
   }, [fretboard, nut, pointer, start, dots, hint]);
 
-  return <canvas ref={canvasRef} />;
+  return <canvas style={{ width: '100%', maxWidth: 120 * fretboard[0].length }} ref={canvasRef} />;
 };

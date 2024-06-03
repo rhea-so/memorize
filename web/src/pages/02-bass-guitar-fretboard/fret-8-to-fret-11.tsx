@@ -61,11 +61,11 @@ export const Fret8ToFret11Page = () => {
 
   return (
     <Page>
-      <Navbar title="베이스 기타 지판 암기 (8프렛 → 11프렛)" left={<NavbarBackLink text="돌아가기" onClick={() => navigate('/')} />} />
+      <Navbar title="8프렛 → 11프렛" left={<NavbarBackLink text="돌아가기" onClick={() => navigate('/')} />} />
 
       <BlockTitle>다음 빨간색 원에 해당하는 음이름은 무엇인가요?</BlockTitle>
 
-      <Card className="my-8">
+      <Card className="my-8 flex justify-center">
         <Fretboard
           hint={hint}
           nut={false}

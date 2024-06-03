@@ -83,11 +83,11 @@ export const OpenChordToFret11Page = () => {
 
   return (
     <Page>
-      <Navbar title="베이스 기타 지판 암기 (전체)" left={<NavbarBackLink text="돌아가기" onClick={() => navigate('/')} />} />
+      <Navbar title="전체" left={<NavbarBackLink text="돌아가기" onClick={() => navigate('/')} />} />
 
       <BlockTitle>다음 빨간색 원에 해당하는 음이름은 무엇인가요?</BlockTitle>
 
-      <Card className="my-8">
+      <Card className="my-8 flex justify-center">
         <Fretboard
           hint={hint}
           nut={fretboard === fretboard1 ? true : fretboard === fretboard2 ? false : fretboard === fretboard3 ? false : false}
