@@ -2,7 +2,7 @@ import JSConfetti from 'js-confetti';
 import { Block, BlockTitle, Card, List, ListItem, Navbar, NavbarBackLink, Page, Toggle } from 'konsta/react';
 import { useNavigate } from 'react-router-dom';
 import { QuestionButton } from '../../components/question.button';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Fretboard } from '../../components/fretboard.canvas';
 
 const jsConfetti = new JSConfetti();
@@ -37,6 +37,11 @@ export const OpenChordToFret3Page = () => {
   const [x, setX] = useState(randomPositionX());
   const [y, setY] = useState(randomPositionY());
   const [hint, setHint] = useState(false);
+  const [fixPosition, setFixPosition] = useState(localStorage.getItem('fixPosition') === null ? false : localStorage.getItem('fixPosition') === 'true');
+
+  useEffect(() => {
+    localStorage.setItem('fixPosition', fixPosition.toString());
+  }, [fixPosition]);
 
   const onClick = (answer: string) => {
     if (answer === fretboard[y][x]) {
@@ -67,7 +72,7 @@ export const OpenChordToFret3Page = () => {
       <BlockTitle>다음 빨간색 원에 해당하는 음이름은 무엇인가요?</BlockTitle>
 
       <Card className="my-8 flex justify-center">
-        <Fretboard hint={hint} nut={true} pointer={{ x: x, y: y }} dots={[{ x: 2, type: 1 }]} start={0} fretboard={fretboard} />
+        <Fretboard hint={hint} fixPosition={fixPosition} nut={true} pointer={{ x: x, y: y }} dots={[{ x: 2, type: 1 }]} start={0} fretboard={fretboard} />
       </Card>
 
       <BlockTitle>아래에서 정답을 선택해주세요</BlockTitle>
@@ -82,6 +87,7 @@ export const OpenChordToFret3Page = () => {
 
       <List strongIos outlineIos>
         <ListItem label title="힌트" after={<Toggle checked={hint} onChange={() => setHint(!hint)} />} />
+        <ListItem label title="빨간색 원 위치 보정" after={<Toggle checked={fixPosition} onChange={() => setFixPosition(!fixPosition)} />} />
       </List>
     </Page>
   );

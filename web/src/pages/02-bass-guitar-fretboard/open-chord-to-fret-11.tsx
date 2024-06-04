@@ -2,7 +2,7 @@ import JSConfetti from 'js-confetti';
 import { Block, BlockTitle, Card, List, ListItem, Navbar, NavbarBackLink, Page, Toggle } from 'konsta/react';
 import { useNavigate } from 'react-router-dom';
 import { QuestionButton } from '../../components/question.button';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Fretboard } from '../../components/fretboard.canvas';
 
 const jsConfetti = new JSConfetti();
@@ -57,6 +57,11 @@ export const OpenChordToFret11Page = () => {
   const [x, setX] = useState(randomPositionX(defaultFretboard));
   const [y, setY] = useState(randomPositionY(defaultFretboard));
   const [hint, setHint] = useState(false);
+  const [fixPosition, setFixPosition] = useState(localStorage.getItem('fixPosition') === null ? false : localStorage.getItem('fixPosition') === 'true');
+
+  useEffect(() => {
+    localStorage.setItem('fixPosition', fixPosition.toString());
+  }, [fixPosition]);
 
   const onClick = (answer: string) => {
     if (answer === fretboard[y][x]) {
@@ -91,6 +96,7 @@ export const OpenChordToFret11Page = () => {
       <Card className="my-8 flex justify-center">
         <Fretboard
           hint={hint}
+          fixPosition={fixPosition}
           nut={fretboard === fretboard1 ? true : fretboard === fretboard2 ? false : fretboard === fretboard3 ? false : false}
           pointer={{ x: x, y: y }}
           dots={
@@ -125,6 +131,7 @@ export const OpenChordToFret11Page = () => {
 
       <List strongIos outlineIos>
         <ListItem label title="힌트" after={<Toggle checked={hint} onChange={() => setHint(!hint)} />} />
+        <ListItem label title="빨간색 원 위치 보정" after={<Toggle checked={fixPosition} onChange={() => setFixPosition(!fixPosition)} />} />
       </List>
     </Page>
   );
