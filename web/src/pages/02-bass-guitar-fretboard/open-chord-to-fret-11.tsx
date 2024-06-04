@@ -5,25 +5,27 @@ import { QuestionButton } from '../../components/question.button';
 import { useState } from 'react';
 import { Fretboard } from '../../components/fretboard.canvas';
 
+const jsConfetti = new JSConfetti();
+
 const fretboard1 = [
-  ['G', 'A♭', 'A', 'B♭'],
-  ['D', 'E♭', 'E', 'F'],
-  ['A', 'B♭', 'B', 'C'],
-  ['E', 'F', 'F#', 'G'],
+  ['G', 'G#/A♭', 'A', 'A#/B♭'],
+  ['D', 'D#/E♭', 'E', 'F'],
+  ['A', 'A#/B♭', 'B', 'C'],
+  ['E', 'F', 'F#/G♭', 'G'],
 ];
 
 const fretboard2 = [
-  ['B', 'C', 'D♭', 'D'],
-  ['F#', 'G', 'A♭', 'A'],
-  ['C#', 'D', 'E♭', 'E'],
-  ['G#', 'A', 'B♭', 'B'],
+  ['B', 'C', 'C#/D♭', 'D'],
+  ['F#/G♭', 'G', 'G#/A♭', 'A'],
+  ['C#/D♭', 'D', 'D#/E♭', 'E'],
+  ['G#/A♭', 'A', 'A#/B♭', 'B'],
 ];
 
 const fretboard3 = [
-  ['E♭', 'E', 'F', 'G♭'],
-  ['B♭', 'B', 'C', 'D♭'],
-  ['F', 'G♭', 'G', 'A♭'],
-  ['C', 'D♭', 'D', 'E♭'],
+  ['D#/E♭', 'E', 'F', 'F#/G♭'],
+  ['A#/B♭', 'B', 'C', 'C#/D♭'],
+  ['F', 'F#/G♭', 'G', 'G#/A♭'],
+  ['C', 'C#/D♭', 'D', 'D#/E♭'],
 ];
 
 const shuffleFretboard = () => {
@@ -31,7 +33,6 @@ const shuffleFretboard = () => {
 };
 
 export const OpenChordToFret11Page = () => {
-  const jsConfetti = new JSConfetti();
   const navigate = useNavigate();
 
   const shuffle = (fretboard: string[][]) => {

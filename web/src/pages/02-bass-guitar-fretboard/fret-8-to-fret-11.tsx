@@ -5,11 +5,13 @@ import { QuestionButton } from '../../components/question.button';
 import { useState } from 'react';
 import { Fretboard } from '../../components/fretboard.canvas';
 
+const jsConfetti = new JSConfetti();
+
 const fretboard = [
-  ['E♭', 'E', 'F', 'G♭'],
-  ['B♭', 'B', 'C', 'D♭'],
-  ['F', 'G♭', 'G', 'A♭'],
-  ['C', 'D♭', 'D', 'E♭'],
+  ['D#/E♭', 'E', 'F', 'F#/G♭'],
+  ['A#/B♭', 'B', 'C', 'C#/D♭'],
+  ['F', 'F#/G♭', 'G', 'G#/A♭'],
+  ['C', 'C#/D♭', 'D', 'D#/E♭'],
 ];
 
 const shuffle = () => {
@@ -28,7 +30,6 @@ const randomPositionY = () => {
 };
 
 export const Fret8ToFret11Page = () => {
-  const jsConfetti = new JSConfetti();
   const navigate = useNavigate();
 
   const [options, setOptions] = useState<string[]>(shuffle());
