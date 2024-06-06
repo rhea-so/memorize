@@ -59,17 +59,6 @@ export const Fretboard = ({
       ctx.stroke();
     }
 
-    // draw fretboard
-    if (hint) {
-      for (let i = 0; i < lines; i++) {
-        for (let j = 0; j < frets; j++) {
-          ctx.font = '15px Barlow';
-          ctx.textAlign = 'left';
-          ctx.fillText(fretboard[i][j], (canvas.width / frets) * j + 3 + (j === 0 && start === 0 ? 10 : 0), heightGap * i + 17 + paddingTop);
-        }
-      }
-    }
-
     // draw nut
     if (nut) {
       ctx.lineWidth = 7;
@@ -129,6 +118,29 @@ export const Fretboard = ({
         ctx.arc(widthGap * dot.x + widthGap / 2, paddingTop + heightGap * (lines / 2) + heightGap, 20, 0, 2 * Math.PI);
         ctx.fill();
         ctx.stroke();
+      }
+    }
+
+    // draw fretboard
+    if (hint) {
+      for (let i = 0; i < lines; i++) {
+        for (let j = 0; j < frets; j++) {
+          ctx.font = '15px Barlow';
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'middle';
+
+          if (j === 0) {
+            ctx.textAlign = 'left';
+          }
+
+          // fill white background
+          ctx.fillStyle = 'white';
+          const textWidth = ctx.measureText(fretboard[i][j]).width + 5;
+          ctx.fillRect((canvas.width / frets) * j + 3 + (j === 0 ? 10 : 0) - (j === 0 ? 12 : textWidth / 2), heightGap * i + heightGap / 2 + paddingTop - 7.5, textWidth, 15);
+          ctx.fillStyle = 'black';
+
+          ctx.fillText(fretboard[i][j], (canvas.width / frets) * j + 3, heightGap * i + heightGap / 2 + paddingTop);
+        }
       }
     }
 
