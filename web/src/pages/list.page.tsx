@@ -15,6 +15,12 @@ export const ListPage = () => {
           <ListItem link title="CDEFGAB → 도레미파솔라시" onClick={() => navigate('/pitch-name/english-to-korean')} />
         </List>
 
+        <BlockTitle>오선보</BlockTitle>
+        <List strongIos outlineIos>
+          <ListItem link title="낮은음자리표 음이름 맞추기" onClick={() => navigate('/staff/f-clef-pitch-name')} />
+          <ListItem link title="높은음자리표 음이름 맞추기" onClick={() => navigate('/staff/g-clef-pitch-name')} />
+        </List>
+
         <BlockTitle>4현 베이스 기타 지판 암기 (EADG Standard Tuning)</BlockTitle>
         <List strongIos outlineIos>
           <ListItem link title="개방현 ~ 3프렛" onClick={() => navigate('/bass-guitar-fretboard/open-chord-to-fret-3')} />

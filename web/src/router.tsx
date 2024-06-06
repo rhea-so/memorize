@@ -6,6 +6,8 @@ import { OpenChordToFret3Page } from './pages/02-bass-guitar-fretboard/open-chor
 import { Fret4ToFret7Page } from './pages/02-bass-guitar-fretboard/fret-4-to-fret-7';
 import { Fret8ToFret11Page } from './pages/02-bass-guitar-fretboard/fret-8-to-fret-11';
 import { OpenChordToFret11Page } from './pages/02-bass-guitar-fretboard/open-chord-to-fret-11';
+import { FClefPitchNamePage } from './pages/03-staff/f-clef-pitch-name';
+import { GClefPitchNamePage } from './pages/03-staff/g-clef-pitch-name';
 
 export const Router = () => {
   return (
@@ -15,6 +17,9 @@ export const Router = () => {
 
         <Route path="/pitch-name/korean-to-english" element={<KoreanToEnglishPage />} />
         <Route path="/pitch-name/english-to-korean" element={<EnglishToKoreanPage />} />
+
+        <Route path="/staff/g-clef-pitch-name" element={<GClefPitchNamePage />} />
+        <Route path="/staff/f-clef-pitch-name" element={<FClefPitchNamePage />} />
 
         <Route path="/bass-guitar-fretboard/open-chord-to-fret-3" element={<OpenChordToFret3Page />} />
         <Route path="/bass-guitar-fretboard/fret-4-to-fret-7" element={<Fret4ToFret7Page />} />
