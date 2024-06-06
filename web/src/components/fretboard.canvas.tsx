@@ -136,10 +136,15 @@ export const Fretboard = ({
           // fill white background
           ctx.fillStyle = 'white';
           const textWidth = ctx.measureText(fretboard[i][j]).width + 5;
-          ctx.fillRect((canvas.width / frets) * j + 3 + (j === 0 ? 10 : 0) - (j === 0 ? 12 : textWidth / 2), heightGap * i + heightGap / 2 + paddingTop - 7.5, textWidth, 15);
+          ctx.fillRect(
+            (canvas.width / frets) * j + 3 + (j === 0 ? 10 : 0) - (j === 0 ? 12 : textWidth / 2) - (fixPosition && j !== 0 ? widthGap / 2 : 0),
+            heightGap * i + heightGap / 2 + paddingTop - 7.5,
+            textWidth,
+            15
+          );
           ctx.fillStyle = 'black';
 
-          ctx.fillText(fretboard[i][j], (canvas.width / frets) * j + 3, heightGap * i + heightGap / 2 + paddingTop);
+          ctx.fillText(fretboard[i][j], (canvas.width / frets) * j + 3 - (fixPosition && j !== 0 ? widthGap / 2 : 0), heightGap * i + heightGap / 2 + paddingTop);
         }
       }
     }
