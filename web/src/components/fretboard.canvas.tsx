@@ -124,6 +124,14 @@ export const Fretboard = ({
       }
     }
 
+    // draw question
+    ctx.strokeStyle = 'red';
+    ctx.lineWidth = 5;
+    ctx.beginPath();
+    ctx.arc(widthGap * pointer.x - (pointer.x === 0 ? 0 : fixPosition ? widthGap / 2 : 0), heightGap * pointer.y + heightGap / 2 + paddingTop, 15, 0, 2 * Math.PI);
+    ctx.stroke();
+    ctx.strokeStyle = 'black';
+
     // draw fretboard
     if (hint) {
       for (let i = 0; i < lines; i++) {
@@ -151,14 +159,6 @@ export const Fretboard = ({
         }
       }
     }
-
-    // draw question
-    ctx.strokeStyle = 'red';
-    ctx.lineWidth = 5;
-    ctx.beginPath();
-    ctx.arc(widthGap * pointer.x - (pointer.x === 0 ? 0 : fixPosition ? widthGap / 2 : 0), heightGap * pointer.y + heightGap / 2 + paddingTop, 15, 0, 2 * Math.PI);
-    ctx.stroke();
-    ctx.strokeStyle = 'black';
   }, [fretboard, nut, pointer, start, dots, hint, fixPosition]);
 
   return <canvas style={{ width: '100%', maxWidth: 120 * fretboard[0].length }} ref={canvasRef} />;
