@@ -42,7 +42,7 @@ export const GClefPitchNamePage = () => {
     <Page>
       <Navbar title="높은음자리표 음이름 맞추기" left={<NavbarBackLink text="돌아가기" onClick={() => navigate('/')} />} />
 
-      <BlockTitle>다음 음표의 이름은 무엇인가요?</BlockTitle>
+      <BlockTitle>다음 음표의 음이름은 무엇인가요?</BlockTitle>
 
       <Card className="my-8 flex justify-center">
         <Staff notes={[question]} isHigh={true} hint={hint} />
