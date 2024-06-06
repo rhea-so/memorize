@@ -15,7 +15,7 @@ export const GClefPitchNamePage = () => {
   const navigate = useNavigate();
 
   const [options, setOptions] = useState<string[]>(makeQuestion());
-  const [question, setQuestion] = useState<string>(options[0]);
+  const [question, setQuestion] = useState<string>(options[Math.floor(Math.random() * options.length)]);
   const [wrongOptions, setWrongOptions] = useState<string[]>([]);
   const [hint, setHint] = useState(false);
 
@@ -26,12 +26,13 @@ export const GClefPitchNamePage = () => {
         emojiSize: 100,
         confettiNumber: 10,
       });
-      let newOptions = makeQuestion();
-      while (newOptions[0] === question) {
-        newOptions = makeQuestion();
+      const newOptions = makeQuestion();
+      let newQuestion = newOptions[Math.floor(Math.random() * newOptions.length)];
+      while (newQuestion === question) {
+        newQuestion = newOptions[Math.floor(Math.random() * newOptions.length)];
       }
       setOptions(newOptions);
-      setQuestion(newOptions[0]!);
+      setQuestion(newQuestion);
       setWrongOptions([]);
     } else {
       setWrongOptions([...wrongOptions, answer]);
