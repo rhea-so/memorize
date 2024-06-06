@@ -8,6 +8,14 @@ import { Fret8ToFret11Page } from './pages/02-bass-guitar-fretboard/fret-8-to-fr
 import { OpenChordToFret11Page } from './pages/02-bass-guitar-fretboard/open-chord-to-fret-11';
 import { FClefPitchNamePage } from './pages/03-staff/f-clef-pitch-name';
 import { GClefPitchNamePage } from './pages/03-staff/g-clef-pitch-name';
+import { FiveStringOpenChordToFret3Page } from './pages/04-5-string-guitar-fretboard/open-chord-to-fret-3';
+import { FiveStringOpenChordToFret11Page } from './pages/04-5-string-guitar-fretboard/open-chord-to-fret-11';
+import { FiveStringFret8ToFret11Page } from './pages/04-5-string-guitar-fretboard/fret-8-to-fret-11';
+import { FiveStringFret4ToFret7Page } from './pages/04-5-string-guitar-fretboard/fret-4-to-fret-7';
+import { SixStringFret8ToFret11Page } from './pages/04-6-string-guitar-fretboard/fret-8-to-fret-11';
+import { SixStringOpenChordToFret11Page } from './pages/04-6-string-guitar-fretboard/open-chord-to-fret-11';
+import { SixStringOpenChordToFret3Page } from './pages/04-6-string-guitar-fretboard/open-chord-to-fret-3';
+import { SixStringFret4ToFret7Page } from './pages/04-6-string-guitar-fretboard/fret-4-to-fret-7';
 
 export const Router = () => {
   return (
@@ -25,6 +33,16 @@ export const Router = () => {
         <Route path="/bass-guitar-fretboard/fret-4-to-fret-7" element={<Fret4ToFret7Page />} />
         <Route path="/bass-guitar-fretboard/fret-8-to-fret-11" element={<Fret8ToFret11Page />} />
         <Route path="/bass-guitar-fretboard/open-chord-to-fret-11" element={<OpenChordToFret11Page />} />
+
+        <Route path="/five-string-bass-guitar-fretboard/open-chord-to-fret-3" element={<FiveStringOpenChordToFret3Page />} />
+        <Route path="/five-string-bass-guitar-fretboard/fret-4-to-fret-7" element={<FiveStringFret4ToFret7Page />} />
+        <Route path="/five-string-bass-guitar-fretboard/fret-8-to-fret-11" element={<FiveStringFret8ToFret11Page />} />
+        <Route path="/five-string-bass-guitar-fretboard/open-chord-to-fret-11" element={<FiveStringOpenChordToFret11Page />} />
+
+        <Route path="/six-string-bass-guitar-fretboard/open-chord-to-fret-3" element={<SixStringOpenChordToFret3Page />} />
+        <Route path="/six-string-bass-guitar-fretboard/fret-4-to-fret-7" element={<SixStringFret4ToFret7Page />} />
+        <Route path="/six-string-bass-guitar-fretboard/fret-8-to-fret-11" element={<SixStringFret8ToFret11Page />} />
+        <Route path="/six-string-bass-guitar-fretboard/open-chord-to-fret-11" element={<SixStringOpenChordToFret11Page />} />
       </Routes>
     </BrowserRouter>
   );
