@@ -139,8 +139,8 @@ export const Staff = ({ notes, isHigh, hint }: { notes: string[]; isHigh: boolea
         }
         if (note === 'B') {
           ctx.beginPath();
-          ctx.moveTo(x + lineHeight * 0.7, y + lineHeight * 3);
-          ctx.lineTo(x + lineHeight * 0.7, y - lineHeight * 0.5);
+          ctx.moveTo(x - lineHeight * 0.7, y + lineHeight * 3);
+          ctx.lineTo(x - lineHeight * 0.7, y - lineHeight * 0.5);
           ctx.stroke();
         } else {
           ctx.beginPath();
@@ -153,8 +153,8 @@ export const Staff = ({ notes, isHigh, hint }: { notes: string[]; isHigh: boolea
         ctx.strokeStyle = 'black';
         if (note !== 'C') {
           ctx.beginPath();
-          ctx.moveTo(x + lineHeight * 0.7, y + lineHeight * 3);
-          ctx.lineTo(x + lineHeight * 0.7, y - lineHeight * 0.5);
+          ctx.moveTo(x - lineHeight * 0.7, y + lineHeight * 3);
+          ctx.lineTo(x - lineHeight * 0.7, y - lineHeight * 0.5);
           ctx.stroke();
         } else {
           ctx.beginPath();
