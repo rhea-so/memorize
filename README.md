@@ -2,7 +2,7 @@
   <img src="https://github.com/yurucam/bass/assets/25793226/bfc9a350-3f94-44d6-bd68-9f3a43632480" alt="lespaul guitar" width=200px />
 </p>
 
-<h1 align="center"><a href="https://bass.yuru.cam">MUSIC TOMO</a></h1>
+<h1 align="center"><a href="https://bass.yuru.cam">BASS TOMO</a></h1>
 
 <p align="center">
   🎸 A music study helper
@@ -21,7 +21,7 @@
 <p/>
 
   
-[MUSIC TOMO](https://bass.yuru.cam) is a web application that offers various quizzes related to bass guitar.
+[BASS TOMO](https://bass.yuru.cam) is a web application that offers various quizzes related to bass guitar.
 
 ## Contributors
 
