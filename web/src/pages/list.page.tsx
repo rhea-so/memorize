@@ -1,4 +1,4 @@
-import { BlockTitle, List, ListItem, Navbar, Page } from 'konsta/react';
+import { BlockTitle, Link, List, ListItem, Navbar, Page } from 'konsta/react';
 import { useNavigate } from 'react-router-dom';
 
 export const ListPage = () => {
@@ -7,7 +7,15 @@ export const ListPage = () => {
   return (
     <>
       <Page>
-        <Navbar title="베이스토모" />
+        <Navbar
+          title="베이스토모"
+          subtitle="뉴비 베이시스트들을 위한 퀴즈 서비스"
+          right={
+            <Link toolbar onClick={() => window.open('https://github.com/yurucam/bass-tomo')}>
+              GitHub
+            </Link>
+          }
+        />
 
         <BlockTitle>음이름 외우기</BlockTitle>
         <List strongIos outlineIos>
