@@ -22,6 +22,9 @@ export const Staff = ({ notes, isHigh, hint }: { notes: string[]; isHigh: boolea
     const ctx = canvas.getContext('2d')!;
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = 'white';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = 'black';
 
     // draw lines
     ctx.lineWidth = 1;
