@@ -14,7 +14,7 @@ const randomPitchName = () => {
 export const PressFretboardPage = () => {
   const navigate = useNavigate();
 
-  const timeout = 10;
+  const timeout = 5;
 
   const [line, setLine] = useState(randomLine());
   const [pitchName, setPitchName] = useState(randomPitchName());
