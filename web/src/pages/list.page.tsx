@@ -35,6 +35,7 @@ export const ListPage = () => {
           <ListItem link title="4프렛 ~ 7프렛" onClick={() => navigate('/bass-guitar-fretboard/fret-4-to-fret-7')} />
           <ListItem link title="8프렛 ~ 11프렛" onClick={() => navigate('/bass-guitar-fretboard/fret-8-to-fret-11')} />
           <ListItem link title="전체" onClick={() => navigate('/bass-guitar-fretboard/open-chord-to-fret-11')} />
+          <ListItem link title="지판 누르기" onClick={() => navigate('/press-fretboard')} />
         </List>
 
         <BlockTitle>5현 베이스 기타 지판 암기 (BEADG Standard Tuning)</BlockTitle>

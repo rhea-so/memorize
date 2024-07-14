@@ -16,6 +16,7 @@ import { SixStringFret8ToFret11Page } from './pages/04-6-string-guitar-fretboard
 import { SixStringOpenChordToFret11Page } from './pages/04-6-string-guitar-fretboard/open-chord-to-fret-11';
 import { SixStringOpenChordToFret3Page } from './pages/04-6-string-guitar-fretboard/open-chord-to-fret-3';
 import { SixStringFret4ToFret7Page } from './pages/04-6-string-guitar-fretboard/fret-4-to-fret-7';
+import { PressFretboardPage } from './pages/05-press-fretboard/press-fretboard.page';
 
 export const Router = () => {
   return (
@@ -33,6 +34,7 @@ export const Router = () => {
         <Route path="/bass-guitar-fretboard/fret-4-to-fret-7" element={<Fret4ToFret7Page />} />
         <Route path="/bass-guitar-fretboard/fret-8-to-fret-11" element={<Fret8ToFret11Page />} />
         <Route path="/bass-guitar-fretboard/open-chord-to-fret-11" element={<OpenChordToFret11Page />} />
+        <Route path="/press-fretboard" element={<PressFretboardPage />} />
 
         <Route path="/five-string-bass-guitar-fretboard/open-chord-to-fret-3" element={<FiveStringOpenChordToFret3Page />} />
         <Route path="/five-string-bass-guitar-fretboard/fret-4-to-fret-7" element={<FiveStringFret4ToFret7Page />} />
